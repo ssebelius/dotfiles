@@ -1,0 +1,16 @@
+[user]
+	name = Scott Sebelius
+	email = scott.sebelius@gmail.com
+[push]
+	default = current
+[merge]
+	tool = diffmerge
+[mergetool "diffmerge"]
+	trustExitCode = true
+	cmd = diffmerge --merge\n--result=$MERGED $LOCAL $BASE $REMOTE
+[core]
+	excludesfile = /Users/ssebelius/.gitignore
+[filter "lfs"]
+	clean = git lfs clean %f
+	smudge = git lfs smudge %f
+	required = true
